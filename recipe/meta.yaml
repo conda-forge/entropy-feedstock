@@ -1,13 +1,13 @@
 {% set name = "entropy" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: "{{ name|lower }}"
-  version: "{{ version }}"
+  version: "v{{ version }}"
 
 source:
-  url: https://github.com/raphaelvallat/{{ name|lower }}/archive/{{ version }}.tar.gz
-  sha256: 9ed51ccd294115890d62616843f21492abfb196104b70110a248ee4ef5a92980
+  url: https://github.com/raphaelvallat/{{ name|lower }}/archive/v{{ version }}.tar.gz
+  sha256: 63e91173b837002ce4b6cd4c42763aa998d78cb3ca48c297f4bb6adac813f902
        
 build:
   noarch: python
