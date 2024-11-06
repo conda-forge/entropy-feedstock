@@ -1,19 +1,18 @@
 {% set name = "entropy" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "v{{ version }}"
+  name: {{ name|lower }}
+  version: v{{ version }}
 
 source:
   url: https://github.com/raphaelvallat/{{ name|lower }}/archive/v{{ version }}.tar.gz
-  sha256: 63e91173b837002ce4b6cd4c42763aa998d78cb3ca48c297f4bb6adac813f902
-       
+  sha256: 92a43300442224a7bdd011736f0fa55bcb6e021a2ce27472bd93d41362749ac2
+
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
-  
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 requirements:
   host:
     - pip
@@ -38,12 +37,12 @@ test:
 
 about:
   home: https://raphaelvallat.com/entropy/build/html/index.html
-  license: "BSD-3-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE"
-  summary: "EntroPy: EntroPy is a Python 3 package providing several time-efficient algorithms for computing the complexity of one-dimensional time series. It can be used for example to extract features from EEG signals."
-  doc_url: "https://raphaelvallat.com/entropy/build/html/index.html"
-  dev_url: "https://github.com/raphaelvallat/entropy/"
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'EntroPy: EntroPy is a Python 3 package providing several time-efficient algorithms for computing the complexity of one-dimensional time series. It can be used for example to extract features from EEG signals.'
+  doc_url: https://raphaelvallat.com/entropy/build/html/index.html
+  dev_url: https://github.com/raphaelvallat/entropy/
 
 extra:
   recipe-maintainers:

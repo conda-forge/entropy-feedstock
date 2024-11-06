@@ -5,11 +5,13 @@ Home: https://raphaelvallat.com/entropy/build/html/index.html
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/entropy-feedstock/blob/master/LICENSE.txt)
 
 Summary: EntroPy: EntroPy is a Python 3 package providing several time-efficient algorithms for computing the complexity of one-dimensional time series. It can be used for example to extract features from EEG signals.
 
+Development: https://github.com/raphaelvallat/entropy/
 
+Documentation: https://raphaelvallat.com/entropy/build/html/index.html
 
 Current build status
 ====================
@@ -108,9 +110,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
