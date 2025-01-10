@@ -11,20 +11,20 @@ source:
        
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - numpy
     - scipy
     - scikit-learn
     - numba
 
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - scipy
     - scikit-learn
@@ -35,6 +35,7 @@ test:
     - {{ name|lower }}
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://raphaelvallat.com/entropy/build/html/index.html
